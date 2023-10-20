@@ -6,6 +6,8 @@
 
 
 #include <TrustWalletCore/TWString.h>
+
+#include <TrezorCrypto/memzero.h>
 #include <string>
 
 TWString *_Nonnull TWStringCreateWithUTF8Bytes(const char *_Nonnull bytes) {
@@ -34,7 +36,9 @@ const char *_Nonnull TWStringUTF8Bytes(TWString *_Nonnull string) {
 }
 
 void TWStringDelete(TWString *_Nonnull string) {
-    auto* s = reinterpret_cast<const std::string*>(string);
+    auto *sConst = reinterpret_cast<const std::string*>(string);
+    auto *s = const_cast<std::string*>(sConst);
+    memzero(s->data(), s->size());
     delete s;
 }
 
