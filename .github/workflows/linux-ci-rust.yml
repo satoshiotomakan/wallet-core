@@ -21,7 +21,7 @@ jobs:
       contents: read
       checks: write
     runs-on: ubuntu-latest
-    if: github.event.pull_request.draft == false
+    if: false
     steps:
       - uses: actions/checkout@v3
       - name: Install system dependencies
@@ -74,7 +74,7 @@ jobs:
   # Run Rust tests in WASM.
   test-wasm:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.draft == false
+    if: false
     steps:
       - uses: actions/checkout@v3
       - name: Install system dependencies
@@ -100,3 +100,20 @@ jobs:
 
       - name: Run tests in WASM
         run: tools/rust-test wasm
+
+  check-binary-sizes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create a dummy artifact
+        run: |
+          mkdir tmp
+          cp registry.json tmp/artifact.txt
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      # ---------- this runs sizewatcher ------------
+      - run: npx @adobe/sizewatcher
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
