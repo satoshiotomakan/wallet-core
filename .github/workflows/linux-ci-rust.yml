@@ -126,15 +126,6 @@ jobs:
           path: prev
           if_no_artifact_found: warn
 
-      - name: Find Comment
-        if: steps.download_prev_artifact.outputs.found_artifact == 'true'
-        uses: peter-evans/find-comment@v1
-        id: find_comment
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'github-actions[bot]'
-          body-includes: Binary size comparison
-
       - name: Craft Comment Body
         if: steps.download_prev_artifact.outputs.found_artifact == 'true'
         id: compute_sizes
@@ -143,11 +134,13 @@ jobs:
           echo "size_after=$( du -k registry.json | cut -f1 )" >> $GITHUB_OUTPUT
 
       - name: Create or Update Comment
+        uses: edumserrano/find-create-or-update-comment@v2
         if: steps.download_prev_artifact.outputs.found_artifact == 'true'
-        uses: peter-evans/create-or-update-comment@v1
         with:
-          comment-id: ${{ steps.find_comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
+          body-includes: "Binary size comparison"
+          comment-author: 'github-actions[bot]'
+          edit-mode: replace
           body: |
             **Binary size comparison**:
 
