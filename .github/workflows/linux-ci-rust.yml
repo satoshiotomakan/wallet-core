@@ -153,7 +153,7 @@ jobs:
           name: release_report
 
       - name: Craft Comment Body
-        if: steps.download_prev_artifact.outputs.found_artifact == 'true'
+        if: steps.download_prev_report.outputs.found_artifact == 'true'
         id: craft_body
         run: |
           before_report=./previous/release-report.json
@@ -163,7 +163,7 @@ jobs:
 
       - name: Create or Update Comment
         uses: edumserrano/find-create-or-update-comment@v2
-        if: steps.download_prev_artifact.outputs.found_artifact == 'true'
+        if: steps.download_prev_report.outputs.found_artifact == 'true'
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body-includes: "Binary size comparison"
