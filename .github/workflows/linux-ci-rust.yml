@@ -101,19 +101,50 @@ jobs:
       - name: Run tests in WASM
         run: tools/rust-test wasm
 
-  check-binary-sizes:
+  upload-binary-sizes:
     runs-on: ubuntu-latest
+    if: github.event_name == 'push'
     steps:
       - uses: actions/checkout@v3
-      - name: Create a dummy artifact
-        run: |
-          mkdir tmp
-          cp registry.json tmp/artifact.txt
-      - name: Install Node.js
-        uses: actions/setup-node@v1
+      - name: Upload binary sizes
+        uses: actions/upload-artifact@v2
         with:
-          node-version: '14'
-      # ---------- this runs sizewatcher ------------
-      - run: npx @adobe/sizewatcher
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: registry_json
+          path: registry.json
+
+  check-binary-sizes:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Download previous artifact
+        id: download_prev_artifact
+        uses: dawidd6/action-download-artifact@v3
+        with:
+          commit: ${{github.event.pull_request.head.sha}}
+          path: prev
+          if_no_artifact_found: warn
+
+      - name: Find Comment
+        if: steps.download_prev_artifact.outputs.found_artifact == 'true'
+        uses: peter-evans/find-comment@v1
+        id: binary_size_comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Binary size comparison
+
+      - name: Create or Update Comment
+        if: steps.download_prev_artifact.outputs.found_artifact == 'true'
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          comment-id: ${{ steps.find_comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            **Binary size comparison**:
+
+            ```diff
+            - registry.json $(du -k registry.json | cut -f1)
+            + registry.json $(du -k prev/registry.json | cut -f1)
+            ```
