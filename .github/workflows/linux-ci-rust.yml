@@ -139,8 +139,8 @@ jobs:
         if: steps.download_prev_artifact.outputs.found_artifact == 'true'
         id: compute_sizes
         run: |
-          echo "::set-output size_before=$( du -k prev/registry.json | cut -f1 )"
-          echo "::set-output size_after=$( du -k registry.json | cut -f1 )"
+          echo "size_before=$( du -k prev/registry.json" | cut -f1 )" >> $GITHUB_OUTPUT
+          echo "size_after=$( du -k registry.json" | cut -f1 )" >> $GITHUB_OUTPUT
 
       - name: Create or Update Comment
         if: steps.download_prev_artifact.outputs.found_artifact == 'true'
