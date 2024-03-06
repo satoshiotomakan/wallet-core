@@ -145,6 +145,6 @@ jobs:
             **Binary size comparison**:
 
             ```diff
-            - registry.json $(du -k registry.json | cut -f1)
-            + registry.json $(du -k prev/registry.json | cut -f1)
+            - registry.json ${{ du -k registry.json | cut -f1 }}
+            + registry.json ${{ du -k prev/registry.json | cut -f1 }}
             ```
