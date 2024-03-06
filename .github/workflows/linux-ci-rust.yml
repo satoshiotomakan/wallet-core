@@ -108,7 +108,7 @@ jobs:
       - name: Build binaries
         run: |
           cargo build --target aarch64-apple-ios --release
-        working-directory: codegen-v2
+        working-directory: rust-test
       - name: Generate release report
         run: |
           ./tools/release-size measure-rust > release-report.json
@@ -128,8 +128,8 @@ jobs:
           toolchain: stable
       - name: Build binaries
         run: |
-          cargo build --target aarch64-apple-ios --release
-        working-directory: codegen-v2
+          cargo build --target armv7-linux-androideabi --release
+        working-directory: rust-test
       - name: Generate release report
         run: |
           ./tools/release-size measure-rust > release-report.json
