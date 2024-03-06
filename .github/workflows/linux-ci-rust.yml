@@ -129,7 +129,7 @@ jobs:
       - name: Find Comment
         if: steps.download_prev_artifact.outputs.found_artifact == 'true'
         uses: peter-evans/find-comment@v1
-        id: binary_size_comment
+        id: find_comment
         with:
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: 'github-actions[bot]'
@@ -139,7 +139,7 @@ jobs:
         if: steps.download_prev_artifact.outputs.found_artifact == 'true'
         id: compute_sizes
         run: |
-          echo "size_before=$( du -k prev/registry.json | cut -f1 )" >> $GITHUB_OUTPUT
+          echo "size_before=$( du -k prev/registry_json/registry.json | cut -f1 )" >> $GITHUB_OUTPUT
           echo "size_after=$( du -k registry.json | cut -f1 )" >> $GITHUB_OUTPUT
 
       - name: Create or Update Comment
