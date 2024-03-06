@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+
+import argparse
+import json
+import os
+
+RUST_TARGETS = [
+    # "aarch64-apple-ios",
+    # "aarch64-linux-android",
+    "armv7-linux-androideabi",
+    # "wasm32-unknown-emscripten",
+]
+LIB_NAME = "libwallet_core_rs.a"
+
+
+def measure_rust(_args):
+    result = {}
+
+    for target in RUST_TARGETS:
+        # TODO 'rust-test' to 'rust'
+        path = f'rust-test/target/{target}/release/{LIB_NAME}'
+        file_stats = os.stat(path)
+        file_size_mb = file_stats.st_size / 1024 / 1024
+        result[target] = round(file_size_mb, 2)
+
+    print(json.dumps(result))
+
+
+def compare_sizes(args):
+    print('```diff')
+
+    before_json = json.load(open(args.before, 'r'))
+    after_json = json.load(open(args.after, 'r'))
+    for target, after_value in after_json.items():
+        before_value = before_json[target]
+        diff = after_value - before_value
+
+        print(f'**{target}**')
+        print(f'- Size {before_value}')
+        print(f'+ Size {after_value} \t {diff:+.2f}')
+        print()
+    print("```")
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="GitHub CI helper functions")
+    subparsers = parser.add_subparsers()
+
+    measure_parser = subparsers.add_parser('measure-rust', help="Measures Rust release binaries'")
+    measure_parser.set_defaults(func=measure_rust)
+
+    compare_parser = subparsers.add_parser('compare',
+                                           help="Compares binary sizes. Takes 'before' and 'after' file names")
+    compare_parser.add_argument('before')
+    compare_parser.add_argument('after')
+    compare_parser.set_defaults(func=compare_sizes)
+
+    args = parser.parse_args()
+    args.func(args)

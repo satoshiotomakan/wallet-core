@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [ dev, master ]
 
-env:
-  SCCACHE_GHA_ENABLED: "true"
-  RUSTC_WRAPPER: "sccache"
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -106,45 +102,70 @@ jobs:
     if: github.event_name == 'push'
     steps:
       - uses: actions/checkout@v3
-      - name: Upload binary sizes
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: Build binaries
+        run: |
+          cargo build --target aarch64-apple-ios --release
+        working-directory: rust-test
+      - name: Generate release report
+        run: |
+          ./tools/release-size measure-rust > release-report.json
+      - name: Upload release report
         uses: actions/upload-artifact@v2
         with:
-          name: registry_json
-          path: registry.json
+          name: release_report
+          path: release-report.json
 
   check-binary-sizes:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v3
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      # TODO remove this step
+      - name: Install toolchain
+        run: |
+          rustup target add armv7-linux-androideabi
+      - name: Build binaries
+        run: |
+          cargo build --target armv7-linux-androideabi --release
+        working-directory: rust-test
+      - name: Generate release report
+        run: |
+          ./tools/release-size measure-rust > release-report.json
 
-      - name: Download previous artifact
-        id: download_prev_artifact
+      - name: Download previous release report
+        id: download_prev_report
         uses: dawidd6/action-download-artifact@v3
         with:
-          commit: ${{github.event.pull_request.head.sha}}
-          path: prev
+          commit: ${{github.event.pull_request.base.sha}}
+          path: previous
           if_no_artifact_found: warn
+          # Same artifact name as at the "Upload release report" step.
+          name: release_report
 
-      - name: Find Comment
+      - name: Craft Comment Body
         if: steps.download_prev_artifact.outputs.found_artifact == 'true'
-        uses: peter-evans/find-comment@v1
-        id: binary_size_comment
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'github-actions[bot]'
-          body-includes: Binary size comparison
+        id: craft_body
+        run: |
+          before_report=./previous/release-report.json
+          after_report=./release-report.json
+          markdown_diff=$(./tools/release-size compare $before_report $after_report)
+          echo "markdown_body=$markdown_diff" >> $GITHUB_OUTPUT
 
       - name: Create or Update Comment
+        uses: edumserrano/find-create-or-update-comment@v2
         if: steps.download_prev_artifact.outputs.found_artifact == 'true'
-        uses: peter-evans/create-or-update-comment@v1
         with:
-          comment-id: ${{ steps.find_comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
+          body-includes: "Binary size comparison"
+          comment-author: 'github-actions[bot]'
+          edit-mode: replace
           body: |
-            **Binary size comparison**:
+            ## Binary size comparison
 
-            ```diff
-            - registry.json $(du -k registry.json | cut -f1)
-            + registry.json $(du -k prev/registry.json | cut -f1)
-            ```
+            ${{ steps.craft_body.outputs.markdown_body }}

@@ -5765,5 +5765,2225 @@
       "rpc": "https://pacific-rpc.manta.network/http",
       "documentation": "https://docs.manta.network/docs/Introduction"
     }
+  },
+  {
+    "id": "metis",
+    "name": "Metis",
+    "coinId": 10001088,
+    "symbol": "METIS",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1088",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://andromeda-explorer.metis.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x422f2ebbede32d4434ad0cf0ae55d44a84e14d3d5725a760133255b42676d8ce",
+      "sampleAccount": "0xBe9E8Ec25866B21bA34e97b9393BCabBcB4A5C86"
+    },
+    "info": {
+      "url": "https://www.metis.io/",
+      "source": "https://github.com/MetisProtocol/mvm",
+      "rpc": "https://andromeda.metis.io/?owner=1088",
+      "documentation": "https://docs.metis.io/"
+    }
+  },
+  {
+    "id": "aurora",
+    "name": "Aurora",
+    "coinId": 1323161554,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1313161554",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://aurorascan.dev",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x99deebdb70f8027037abb3d3d0f3c7523daee857d85e9056d2671593ff2f2f28",
+      "sampleAccount": "0x8707cdE20dd43E3dB1F74c28fcd509ef38B0bA51"
+    },
+    "info": {
+      "url": "https://aurora.dev/",
+      "source": "https://github.com/aurora-is-near/aurora-engine",
+      "rpc": "https://mainnet.aurora.dev/",
+      "documentation": "https://doc.aurora.dev/"
+    }
+  },
+  {
+    "id": "evmos",
+    "name": "Evmos",
+    "coinId": 10009001,
+    "symbol": "EVMOS",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "9001",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://evm.evmos.org",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x24af42cf4977a96d62e3a82c3cd9b519c3e7c53dd83398b88f0cb435d867b422",
+      "sampleAccount": "0x30627903124Aa1e71384bc52e1cb96E4AB3252b6"
+    },
+    "info": {
+      "url": "https://evmos.org/",
+      "source": "https://github.com/tharsis/evmos",
+      "rpc": "https://eth.bd.evmos.org:8545",
+      "documentation": "https://docs.evmos.org/"
+    }
+  },
+  {
+    "id": "nativeevmos",
+    "name": "NativeEvmos",
+    "displayName": "Native Evmos",
+    "coinId": 20009001,
+    "symbol": "EVMOS",
+    "decimals": 18,
+    "blockchain": "NativeEvmos",
+    "chainId": "evmos_9001-2",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "evmos",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://mintscan.io/evmos",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "A16C211C83AD1E684DE46F694FAAC17D8465C864BD7385A81EC062CDE0638811",
+      "sampleAccount": "evmos17xpfvakm2amg962yls6f84z3kell8c5ljcjw34"
+    },
+    "info": {
+      "url": "https://evmos.org/",
+      "client": "https://github.com/tharsis/evmos",
+      "clientPublic": "https://rest.bd.evmos.org:1317",
+      "clientDocs": ""
+    }
+  },
+  {
+    "id": "moonriver",
+    "name": "Moonriver",
+    "coinId": 10001285,
+    "symbol": "MOVR",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1285",
+    "explorer": {
+      "url": "https://moonriver.moonscan.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x2e2daa3943ba65d9bbb910a4f6765aa6a466a0ef8935090547ca9d30e201e032",
+      "sampleAccount": "0x899831D937937d011305E73EE782cce0455DF15a"
+    },
+    "info": {
+      "url": "https://moonbeam.network/networks/moonriver",
+      "rpc": "https://moonriver.public.blastapi.io"
+    }
+  },
+  {
+    "id": "moonbeam",
+    "name": "Moonbeam",
+    "coinId": 10001284,
+    "symbol": "GLMR",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1284",
+    "explorer": {
+      "url": "https://moonscan.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0xb22a146c933e6e51affbfa5f712a266b5f5e92ae453cd2f252bcc3c36ff035a6",
+      "sampleAccount": "0x201bb4f276C765dF7225e5A4153E17edD23a67eC"
+    },
+    "info": {
+      "url": "https://moonbeam.network",
+      "rpc": "https://rpc.api.moonbeam.network",
+      "documentation": "https://docs.moonbeam.network"
+    }
+  },
+  {
+    "id": "klaytn",
+    "name": "Klaytn",
+    "coinId": 10008217,
+    "symbol": "KLAY",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "8217",
+    "explorer": {
+      "url": "https://scope.klaytn.com",
+      "txPath": "/tx/",
+      "accountPath": "/account/",
+      "sampleTx": "0x93ea92687845fe7bb6cacd69c76a16a2a3c2bbb85a8a93ff0e032d0098d583d7",
+      "sampleAccount": "0x2ad9656bf5b82caf10847b431012e28e301e83ba"
+    },
+    "info": {
+      "url": "https://klaytn.foundation",
+      "rpc": "https://public-node-api.klaytnapi.com/v1/cypress",
+      "documentation": "https://docs.klaytn.foundation"
+    }
+  },
+  {
+    "id": "meter",
+    "name": "Meter",
+    "coinId": 18000,
+    "chainId": "82",
+    "symbol": "MTR",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "explorer": {
+      "url": "https://scan.meter.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x8ea268d5dbb40217c763b800a75fc063cf28b56f40f2bc69dc043f5c4bbdc144",
+      "sampleAccount": "0xe5a273954d24eddf9ae9ea4cef2347d584cfa3dd"
+    },
+    "info": {
+      "url": "https://meter.io/",
+      "source": "https://github.com/meterio/meter-pov",
+      "rpc": "https://rpc.meter.io",
+      "documentation": "https://docs.meter.io/"
+    }
+  },
+  {
+    "id": "okc",
+    "name": "OKX Chain",
+    "coinId": 996,
+    "chainId": "66",
+    "symbol": "OKT",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://www.oklink.com/oktc",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x46C3A947E8248570FBD28E4FE456CC8F80DFD90716533878FB67857B95FA3D37",
+      "sampleAccount": "0x074faafd0b20fad2efa115b8ed7e75993e580b85"
+    },
+    "info": {
+      "url": "https://www.okx.com/okc",
+      "source": "https://github.com/okex/exchain",
+      "rpc": "https://exchainrpc.okex.org",
+      "documentation": "https://okc-docs.readthedocs.io/en/latest"
+    }
+  },
+  {
+    "id": "cfxevm",
+    "name": "Conflux eSpace",
+    "coinId": 1030,
+    "chainId": "1030",
+    "symbol": "CFX",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://evm.confluxscan.net",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x920efefb3213b2d6a3b84149cb50b61a813d085443a20e1b0eab74120e41ff72",
+      "sampleAccount": "0x337a087daef75c72871de592fbbba570829a936a"
+    },
+    "info": {
+      "url": "https://confluxnetwork.org",
+      "source": "https://github.com/conflux-chain",
+      "rpc": "https://evm.confluxrpc.com",
+      "documentation": "https://doc.confluxnetwork.org/docs/espace"
+    }
+  },
+  {
+    "id": "greenfield",
+    "name": "Greenfield",
+    "displayName": "BNB Greenfield",
+    "coinId": 5600,
+    "symbol": "BNB",
+    "decimals": 18,
+    "chainId": "1017",
+    "blockchain": "Greenfield",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://greenfieldscan.com",
+      "txPath": "/tx/",
+      "accountPath": "/account/",
+      "sampleTx": "0x150eac42070957115fd538b1f348fadd78d710fb641c248120efcf35d1e7e4f3",
+      "sampleAccount": "0xcf0f6b88ed72653b00fdebbffc90b98072cb3285"
+    },
+    "info": {
+      "url": "https://greenfield.bnbchain.org",
+      "source": "https://github.com/bnb-chain/greenfield",
+      "rpc": "https://gnfd-testnet-fullnode-tendermint-us.bnbchain.org",
+      "documentation": "https://docs.bnbchain.org/greenfield-docs"
+    }
+  },
+  {
+    "id": "opbnb",
+    "name": "OpBNB",
+    "coinId": 204,
+    "chainId": "204",
+    "symbol": "BNB",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://opbnbscan.com",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x788ea8fb4a82dae957f1d3b18af3cd0bbde55a276e66bd17af8c869f24c03a0f",
+      "sampleAccount": "0x4eaf936c172b5e5511959167e8ab4f7031113ca3"
+    },
+    "info": {
+      "url": "https://opbnb.bnbchain.org/en",
+      "source": "https://github.com/bnb-chain/opbnb",
+      "rpc": "https://opbnb-mainnet-rpc.bnbchain.org",
+      "documentation": "https://docs.bnbchain.org/opbnb-docs"
+    }
+  },
+  {
+    "id": "stratis",
+    "name": "Stratis",
+    "coinId": 105105,
+    "symbol": "STRAX",
+    "decimals": 8,
+    "blockchain": "Bitcoin",
+    "derivation": [
+      {
+        "path": "m/44'/105105'/0'/0/0",
+        "xpub": "xpub",
+        "xprv": "xprv"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "strax",
+    "p2pkhPrefix": 75,
+    "p2shPrefix": 140,
+    "publicKeyHasher": "sha256ripemd",
+    "base58Hasher": "sha256d",
+    "explorer": {
+      "url": "https://explorer.rutanio.com/strax/explorer",
+      "txPath": "/transaction/",
+      "accountPath": "/address/",
+      "sampleTx": "3923df87e83859dec8b87a414cbb1529113788c512a4d0c283e1394c274f0bfb",
+      "sampleAccount": "XWqnSWzQA5kDAS727UTYtXkdcbKc8mEvyN"
+    },
+    "info": {
+      "url": "https://www.stratisplatform.com/",
+      "source": "https://github.com/stratisproject",
+      "rpc": "",
+      "documentation": "https://academy.stratisplatform.com/index.html"
+    }
+  },
+  {
+    "id": "Nebl",
+    "name": "Nebl",
+    "coinId": 146,
+    "symbol": "NEBL",
+    "decimals": 8,
+    "blockchain": "Verge",
+    "derivation": [
+      {
+        "path": "m/44'/146'/0'/0/0",
+        "xpub": "xpub",
+        "xprv": "xprv"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "p2pkhPrefix": 53,
+    "p2shPrefix": 112,
+    "publicKeyHasher": "sha256ripemd",
+    "base58Hasher": "sha256d",
+    "explorer": {
+      "url": "https://explorer.nebl.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "1e56c745ab87d702c98eddc6bc2475b2eb292ed4af92d170b2362c8a089272a4",
+      "sampleAccount": "NboLGGKWtK5eXzaah5GVpXju9jCcoMi4cc"
+    },
+    "info": {
+      "url": "https://nebl.io",
+      "source": "https://github.com/NeblioTeam",
+      "rpc": "",
+      "documentation": "https://github.com/NeblioTeam"
+    }
+  },
+  {
+    "id": "hedera",
+    "name": "Hedera",
+    "coinId": 3030,
+    "symbol": "HBAR",
+    "decimals": 8,
+    "blockchain": "Hedera",
+    "derivation": [
+      {
+        "path": "m/44'/3030'/0'/0'/0"
+      }
+    ],
+    "curve": "ed25519",
+    "publicKeyType": "ed25519",
+    "explorer": {
+      "url": "https://hashscan.io/mainnet",
+      "txPath": "/transaction/",
+      "accountPath": "/account/",
+      "sampleTx": "0.0.19790-1666769504-858851231",
+      "sampleAccount": "0.0.19790"
+    },
+    "info": {
+      "url": "https://hedera.com/",
+      "source": "https://github.com/hashgraph",
+      "documentation": "https://docs.hedera.com"
+    }
+  },
+  {
+    "id": "agoric",
+    "name": "Agoric",
+    "coinId": 564,
+    "symbol": "BLD",
+    "decimals": 6,
+    "blockchain": "Cosmos",
+    "derivation": [
+      {
+        "path": "m/44'/564'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "agoric",
+    "chainId": "agoric-3",
+    "addressHasher": "sha256ripemd",
+    "explorer": {
+      "url": "https://atomscan.com/agoric",
+      "txPath": "/transactions/",
+      "accountPath": "/accounts/",
+      "sampleTx": "576224B1A0F3D56BA23C5350C2A0E3CEA86F40005B828793E5ACBC2F4813152E",
+      "sampleAccount": "agoric1cqvwa8jr6pmt45jndanc8lqmdsxjkhw0yertc0"
+    },
+    "info": {
+      "url": "https://agoric.com",
+      "source": "https://github.com/Agoric/agoric-sdk",
+      "rpc": "https://agoric-rpc.polkachu.com",
+      "documentation": "https://docs.agoric.com"
+    }
+  },
+  {
+    "id": "dydx",
+    "name": "Dydx",
+    "displayName": "dYdX",
+    "coinId": 22000118,
+    "symbol": "DYDX",
+    "decimals": 18,
+    "blockchain": "Cosmos",
+    "derivation": [
+      {
+        "path": "m/44'/118'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "dydx",
+    "chainId": "dydx-mainnet-1",
+    "addressHasher": "sha256ripemd",
+    "explorer": {
+      "url": "https://www.mintscan.io/dydx",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "F236222E4F7C92FA84711FD6451ED22DD56CBDFA319BFDAFB99A21E4E9B9EC2F",
+      "sampleAccount": "dydx1adl7usw7z2dnysyn7wvrghu0u0q6gr7jqs4gtt"
+    },
+    "info": {
+      "url": "https://dydx.exchange",
+      "source": "https://github.com/dydxprotocol",
+      "rpc": "https://dydx-dao-api.polkachu.com",
+      "documentation": "https://docs.dydx.exchange"
+    }
+  },
+  {
+    "id": "nativeinjective",
+    "name": "NativeInjective",
+    "displayName": "Native Injective",
+    "coinId": 10000060,
+    "symbol": "INJ",
+    "decimals": 18,
+    "blockchain": "NativeInjective",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "inj",
+    "addressHasher": "keccak256",
+    "chainId": "injective-1",
+    "explorer": {
+      "url": "https://www.mintscan.io/injective",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "C5F6A4FF9DF1AE9FF543D2CEBD8E3E9B04290B2445F9D91D7707EDBF4B7EE16B",
+      "sampleAccount": "inj1xmpkmxr4as00em23tc2zgmuyy2gr4h3wgcl6vd"
+    },
+    "info": {
+      "url": "https://injective.com",
+      "documentation": "https://docs.injective.network"
+    }
+  },
+  {
+    "id": "nativecanto",
+    "name": "NativeCanto",
+    "displayName": "NativeCanto",
+    "coinId": 10007700,
+    "symbol": "CANTO",
+    "decimals": 18,
+    "blockchain": "Cosmos",
+    "chainId": "canto_7700-1",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "canto",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://mintscan.io/canto",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "7A7830270097AA9AC8B819EFBB8E0B56579F20ECB7615ECD37E19ABEEFB8DB83",
+      "sampleAccount": "canto17xpfvakm2amg962yls6f84z3kell8c5lz0zsl4"
+    },
+    "info": {
+      "url": "https://canto.io/",
+      "documentation": "https://docs.canto.io/"
+    }
+  },
+  {
+    "id": "zetachain",
+    "name": "NativeZetaChain",
+    "displayName": "NativeZetaChain",
+    "coinId": 10007000,
+    "symbol": "ZETA",
+    "decimals": 18,
+    "blockchain": "Cosmos",
+    "chainId": "zetachain_7000-1",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "zeta",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.zetachain.com",
+      "txPath": "/cosmos/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "2DBB071DDD47985F4470A21E5943CE95D371AE4BDE2267E201D3553FB2BDCFDE",
+      "sampleAccount": "zeta14py36sx57ud82t9yrks9z6hdsrpn5x6kmxs0ne"
+    },
+    "info": {
+      "url": "https://www.zetachain.com/",
+      "documentation": "https://www.zetachain.com/docs/"
+    }
+  },
+  {
+    "id": "zetaevm",
+    "name": "Zeta EVM",
+    "coinId": 20007000,
+    "symbol": "ZETA",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "7000",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.zetachain.com",
+      "txPath": "/evm/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x04cb1201857de29af97b755e51c888454fb96c1f3bb3c1329bb94d5353d5c19e",
+      "sampleAccount": "0x85539A58F9c88DdDccBaBBfc660968323Fd1e167"
+    },
+    "info": {
+      "url": "https://www.zetachain.com/",
+      "documentation": "https://www.zetachain.com/docs/"
+    }
+  },
+  {
+    "id": "ton",
+    "name": "TON",
+    "coinId": 607,
+    "symbol": "TON",
+    "decimals": 9,
+    "blockchain": "The Open Network",
+    "derivation": [
+      {
+        "path": "m/44'/607'/0'"
+      }
+    ],
+    "curve": "ed25519",
+    "publicKeyType": "ed25519",
+    "explorer": {
+      "url": "https://tonscan.org",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "fJXfn0EVhV09HFuEgUHu4Cchb24nUQtIMwSzmzk2tLs=",
+      "sampleAccount": "EQCD39VS5jcptHL8vMjEXrzGaRcCVYto7HUn4bpAOg8xqB2N"
+    },
+    "info": {
+      "url": "https://ton.org",
+      "source": "https://github.com/ton-blockchain",
+      "rpc": "https://toncenter.com/api/v2/jsonRPC",
+      "documentation": "https://ton.org/docs"
+    }
+  },
+  {
+    "id": "neon",
+    "name": "Neon",
+    "coinId": 245022934,
+    "symbol": "NEON",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "245022934",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://neonscan.org",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x77d86af2c6f02f14ef13ca52bf54864d92fcc4b32d8e884e225061c006738ed6",
+      "sampleAccount": "0xfa4a8650e7bebb918859c280a86f9661bed29877"
+    },
+    "info": {
+      "url": "https://neonevm.org",
+      "source": "https://github.com/neonevm/neon-evm",
+      "rpc": "https://neon-proxy-mainnet.solana.p2p.org/",
+      "documentation": "https://docs.neonfoundation.io/docs/quick_start"
+    }
+  },
+  {
+    "id": "internet_computer",
+    "name": "Internet Computer",
+    "coinId": 223,
+    "symbol": "ICP",
+    "decimals": 8,
+    "blockchain": "InternetComputer",
+    "derivation": [
+      {
+        "path": "m/44'/223'/1'/0/0",
+        "xpub": "xpub",
+        "xpriv": "xpriv"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "explorer": {
+      "url": "https://dashboard.internetcomputer.org",
+      "txPath": "/transaction/",
+      "accountPath": "/account/",
+      "sampleTx": "9e32c54975adf84a1d98f19df41bbc34a752a899c32cc9c0000200b2c4308f85",
+      "sampleAccount": "529ea51c22e8d66e8302eabd9297b100fdb369109822248bb86939a671fbc55b"
+    },
+    "info": {
+      "url": "https://internetcomputer.org",
+      "source": "https://github.com/dfinity/ic",
+      "rpc": "",
+      "documentation": "https://internetcomputer.org/docs"
+    }
+  },
+  {
+    "id": "manta",
+    "name": "Manta Pacific",
+    "coinId": 169,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "169",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://pacific-explorer.manta.network",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x2bbd5d85b0ed05d1416e30ce1197a6f0c27d10ce02593a2719e2baf486d2e8c2",
+      "sampleAccount": "0xF122a1aC569a36a5Cf6d0F828A22254c8A9afF84"
+    },
+    "info": {
+      "url": "https://pacific.manta.network",
+      "source": "https://github.com/manta-network",
+      "rpc": "https://pacific-rpc.manta.network/http",
+      "documentation": "https://docs.manta.network/docs/Introduction"
+    }
+  },
+  {
+    "id": "metis",
+    "name": "Metis",
+    "coinId": 10001088,
+    "symbol": "METIS",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1088",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://andromeda-explorer.metis.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x422f2ebbede32d4434ad0cf0ae55d44a84e14d3d5725a760133255b42676d8ce",
+      "sampleAccount": "0xBe9E8Ec25866B21bA34e97b9393BCabBcB4A5C86"
+    },
+    "info": {
+      "url": "https://www.metis.io/",
+      "source": "https://github.com/MetisProtocol/mvm",
+      "rpc": "https://andromeda.metis.io/?owner=1088",
+      "documentation": "https://docs.metis.io/"
+    }
+  },
+  {
+    "id": "aurora",
+    "name": "Aurora",
+    "coinId": 1323161554,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1313161554",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://aurorascan.dev",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x99deebdb70f8027037abb3d3d0f3c7523daee857d85e9056d2671593ff2f2f28",
+      "sampleAccount": "0x8707cdE20dd43E3dB1F74c28fcd509ef38B0bA51"
+    },
+    "info": {
+      "url": "https://aurora.dev/",
+      "source": "https://github.com/aurora-is-near/aurora-engine",
+      "rpc": "https://mainnet.aurora.dev/",
+      "documentation": "https://doc.aurora.dev/"
+    }
+  },
+  {
+    "id": "evmos",
+    "name": "Evmos",
+    "coinId": 10009001,
+    "symbol": "EVMOS",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "9001",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://evm.evmos.org",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x24af42cf4977a96d62e3a82c3cd9b519c3e7c53dd83398b88f0cb435d867b422",
+      "sampleAccount": "0x30627903124Aa1e71384bc52e1cb96E4AB3252b6"
+    },
+    "info": {
+      "url": "https://evmos.org/",
+      "source": "https://github.com/tharsis/evmos",
+      "rpc": "https://eth.bd.evmos.org:8545",
+      "documentation": "https://docs.evmos.org/"
+    }
+  },
+  {
+    "id": "nativeevmos",
+    "name": "NativeEvmos",
+    "displayName": "Native Evmos",
+    "coinId": 20009001,
+    "symbol": "EVMOS",
+    "decimals": 18,
+    "blockchain": "NativeEvmos",
+    "chainId": "evmos_9001-2",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "evmos",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://mintscan.io/evmos",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "A16C211C83AD1E684DE46F694FAAC17D8465C864BD7385A81EC062CDE0638811",
+      "sampleAccount": "evmos17xpfvakm2amg962yls6f84z3kell8c5ljcjw34"
+    },
+    "info": {
+      "url": "https://evmos.org/",
+      "client": "https://github.com/tharsis/evmos",
+      "clientPublic": "https://rest.bd.evmos.org:1317",
+      "clientDocs": ""
+    }
+  },
+  {
+    "id": "moonriver",
+    "name": "Moonriver",
+    "coinId": 10001285,
+    "symbol": "MOVR",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1285",
+    "explorer": {
+      "url": "https://moonriver.moonscan.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x2e2daa3943ba65d9bbb910a4f6765aa6a466a0ef8935090547ca9d30e201e032",
+      "sampleAccount": "0x899831D937937d011305E73EE782cce0455DF15a"
+    },
+    "info": {
+      "url": "https://moonbeam.network/networks/moonriver",
+      "rpc": "https://moonriver.public.blastapi.io"
+    }
+  },
+  {
+    "id": "moonbeam",
+    "name": "Moonbeam",
+    "coinId": 10001284,
+    "symbol": "GLMR",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1284",
+    "explorer": {
+      "url": "https://moonscan.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0xb22a146c933e6e51affbfa5f712a266b5f5e92ae453cd2f252bcc3c36ff035a6",
+      "sampleAccount": "0x201bb4f276C765dF7225e5A4153E17edD23a67eC"
+    },
+    "info": {
+      "url": "https://moonbeam.network",
+      "rpc": "https://rpc.api.moonbeam.network",
+      "documentation": "https://docs.moonbeam.network"
+    }
+  },
+  {
+    "id": "klaytn",
+    "name": "Klaytn",
+    "coinId": 10008217,
+    "symbol": "KLAY",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "8217",
+    "explorer": {
+      "url": "https://scope.klaytn.com",
+      "txPath": "/tx/",
+      "accountPath": "/account/",
+      "sampleTx": "0x93ea92687845fe7bb6cacd69c76a16a2a3c2bbb85a8a93ff0e032d0098d583d7",
+      "sampleAccount": "0x2ad9656bf5b82caf10847b431012e28e301e83ba"
+    },
+    "info": {
+      "url": "https://klaytn.foundation",
+      "rpc": "https://public-node-api.klaytnapi.com/v1/cypress",
+      "documentation": "https://docs.klaytn.foundation"
+    }
+  },
+  {
+    "id": "meter",
+    "name": "Meter",
+    "coinId": 18000,
+    "chainId": "82",
+    "symbol": "MTR",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "explorer": {
+      "url": "https://scan.meter.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x8ea268d5dbb40217c763b800a75fc063cf28b56f40f2bc69dc043f5c4bbdc144",
+      "sampleAccount": "0xe5a273954d24eddf9ae9ea4cef2347d584cfa3dd"
+    },
+    "info": {
+      "url": "https://meter.io/",
+      "source": "https://github.com/meterio/meter-pov",
+      "rpc": "https://rpc.meter.io",
+      "documentation": "https://docs.meter.io/"
+    }
+  },
+  {
+    "id": "okc",
+    "name": "OKX Chain",
+    "coinId": 996,
+    "chainId": "66",
+    "symbol": "OKT",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://www.oklink.com/oktc",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x46C3A947E8248570FBD28E4FE456CC8F80DFD90716533878FB67857B95FA3D37",
+      "sampleAccount": "0x074faafd0b20fad2efa115b8ed7e75993e580b85"
+    },
+    "info": {
+      "url": "https://www.okx.com/okc",
+      "source": "https://github.com/okex/exchain",
+      "rpc": "https://exchainrpc.okex.org",
+      "documentation": "https://okc-docs.readthedocs.io/en/latest"
+    }
+  },
+  {
+    "id": "cfxevm",
+    "name": "Conflux eSpace",
+    "coinId": 1030,
+    "chainId": "1030",
+    "symbol": "CFX",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://evm.confluxscan.net",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x920efefb3213b2d6a3b84149cb50b61a813d085443a20e1b0eab74120e41ff72",
+      "sampleAccount": "0x337a087daef75c72871de592fbbba570829a936a"
+    },
+    "info": {
+      "url": "https://confluxnetwork.org",
+      "source": "https://github.com/conflux-chain",
+      "rpc": "https://evm.confluxrpc.com",
+      "documentation": "https://doc.confluxnetwork.org/docs/espace"
+    }
+  },
+  {
+    "id": "greenfield",
+    "name": "Greenfield",
+    "displayName": "BNB Greenfield",
+    "coinId": 5600,
+    "symbol": "BNB",
+    "decimals": 18,
+    "chainId": "1017",
+    "blockchain": "Greenfield",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://greenfieldscan.com",
+      "txPath": "/tx/",
+      "accountPath": "/account/",
+      "sampleTx": "0x150eac42070957115fd538b1f348fadd78d710fb641c248120efcf35d1e7e4f3",
+      "sampleAccount": "0xcf0f6b88ed72653b00fdebbffc90b98072cb3285"
+    },
+    "info": {
+      "url": "https://greenfield.bnbchain.org",
+      "source": "https://github.com/bnb-chain/greenfield",
+      "rpc": "https://gnfd-testnet-fullnode-tendermint-us.bnbchain.org",
+      "documentation": "https://docs.bnbchain.org/greenfield-docs"
+    }
+  },
+  {
+    "id": "opbnb",
+    "name": "OpBNB",
+    "coinId": 204,
+    "chainId": "204",
+    "symbol": "BNB",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://opbnbscan.com",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x788ea8fb4a82dae957f1d3b18af3cd0bbde55a276e66bd17af8c869f24c03a0f",
+      "sampleAccount": "0x4eaf936c172b5e5511959167e8ab4f7031113ca3"
+    },
+    "info": {
+      "url": "https://opbnb.bnbchain.org/en",
+      "source": "https://github.com/bnb-chain/opbnb",
+      "rpc": "https://opbnb-mainnet-rpc.bnbchain.org",
+      "documentation": "https://docs.bnbchain.org/opbnb-docs"
+    }
+  },
+  {
+    "id": "stratis",
+    "name": "Stratis",
+    "coinId": 105105,
+    "symbol": "STRAX",
+    "decimals": 8,
+    "blockchain": "Bitcoin",
+    "derivation": [
+      {
+        "path": "m/44'/105105'/0'/0/0",
+        "xpub": "xpub",
+        "xprv": "xprv"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "strax",
+    "p2pkhPrefix": 75,
+    "p2shPrefix": 140,
+    "publicKeyHasher": "sha256ripemd",
+    "base58Hasher": "sha256d",
+    "explorer": {
+      "url": "https://explorer.rutanio.com/strax/explorer",
+      "txPath": "/transaction/",
+      "accountPath": "/address/",
+      "sampleTx": "3923df87e83859dec8b87a414cbb1529113788c512a4d0c283e1394c274f0bfb",
+      "sampleAccount": "XWqnSWzQA5kDAS727UTYtXkdcbKc8mEvyN"
+    },
+    "info": {
+      "url": "https://www.stratisplatform.com/",
+      "source": "https://github.com/stratisproject",
+      "rpc": "",
+      "documentation": "https://academy.stratisplatform.com/index.html"
+    }
+  },
+  {
+    "id": "Nebl",
+    "name": "Nebl",
+    "coinId": 146,
+    "symbol": "NEBL",
+    "decimals": 8,
+    "blockchain": "Verge",
+    "derivation": [
+      {
+        "path": "m/44'/146'/0'/0/0",
+        "xpub": "xpub",
+        "xprv": "xprv"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "p2pkhPrefix": 53,
+    "p2shPrefix": 112,
+    "publicKeyHasher": "sha256ripemd",
+    "base58Hasher": "sha256d",
+    "explorer": {
+      "url": "https://explorer.nebl.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "1e56c745ab87d702c98eddc6bc2475b2eb292ed4af92d170b2362c8a089272a4",
+      "sampleAccount": "NboLGGKWtK5eXzaah5GVpXju9jCcoMi4cc"
+    },
+    "info": {
+      "url": "https://nebl.io",
+      "source": "https://github.com/NeblioTeam",
+      "rpc": "",
+      "documentation": "https://github.com/NeblioTeam"
+    }
+  },
+  {
+    "id": "hedera",
+    "name": "Hedera",
+    "coinId": 3030,
+    "symbol": "HBAR",
+    "decimals": 8,
+    "blockchain": "Hedera",
+    "derivation": [
+      {
+        "path": "m/44'/3030'/0'/0'/0"
+      }
+    ],
+    "curve": "ed25519",
+    "publicKeyType": "ed25519",
+    "explorer": {
+      "url": "https://hashscan.io/mainnet",
+      "txPath": "/transaction/",
+      "accountPath": "/account/",
+      "sampleTx": "0.0.19790-1666769504-858851231",
+      "sampleAccount": "0.0.19790"
+    },
+    "info": {
+      "url": "https://hedera.com/",
+      "source": "https://github.com/hashgraph",
+      "documentation": "https://docs.hedera.com"
+    }
+  },
+  {
+    "id": "agoric",
+    "name": "Agoric",
+    "coinId": 564,
+    "symbol": "BLD",
+    "decimals": 6,
+    "blockchain": "Cosmos",
+    "derivation": [
+      {
+        "path": "m/44'/564'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "agoric",
+    "chainId": "agoric-3",
+    "addressHasher": "sha256ripemd",
+    "explorer": {
+      "url": "https://atomscan.com/agoric",
+      "txPath": "/transactions/",
+      "accountPath": "/accounts/",
+      "sampleTx": "576224B1A0F3D56BA23C5350C2A0E3CEA86F40005B828793E5ACBC2F4813152E",
+      "sampleAccount": "agoric1cqvwa8jr6pmt45jndanc8lqmdsxjkhw0yertc0"
+    },
+    "info": {
+      "url": "https://agoric.com",
+      "source": "https://github.com/Agoric/agoric-sdk",
+      "rpc": "https://agoric-rpc.polkachu.com",
+      "documentation": "https://docs.agoric.com"
+    }
+  },
+  {
+    "id": "dydx",
+    "name": "Dydx",
+    "displayName": "dYdX",
+    "coinId": 22000118,
+    "symbol": "DYDX",
+    "decimals": 18,
+    "blockchain": "Cosmos",
+    "derivation": [
+      {
+        "path": "m/44'/118'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "dydx",
+    "chainId": "dydx-mainnet-1",
+    "addressHasher": "sha256ripemd",
+    "explorer": {
+      "url": "https://www.mintscan.io/dydx",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "F236222E4F7C92FA84711FD6451ED22DD56CBDFA319BFDAFB99A21E4E9B9EC2F",
+      "sampleAccount": "dydx1adl7usw7z2dnysyn7wvrghu0u0q6gr7jqs4gtt"
+    },
+    "info": {
+      "url": "https://dydx.exchange",
+      "source": "https://github.com/dydxprotocol",
+      "rpc": "https://dydx-dao-api.polkachu.com",
+      "documentation": "https://docs.dydx.exchange"
+    }
+  },
+  {
+    "id": "nativeinjective",
+    "name": "NativeInjective",
+    "displayName": "Native Injective",
+    "coinId": 10000060,
+    "symbol": "INJ",
+    "decimals": 18,
+    "blockchain": "NativeInjective",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "inj",
+    "addressHasher": "keccak256",
+    "chainId": "injective-1",
+    "explorer": {
+      "url": "https://www.mintscan.io/injective",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "C5F6A4FF9DF1AE9FF543D2CEBD8E3E9B04290B2445F9D91D7707EDBF4B7EE16B",
+      "sampleAccount": "inj1xmpkmxr4as00em23tc2zgmuyy2gr4h3wgcl6vd"
+    },
+    "info": {
+      "url": "https://injective.com",
+      "documentation": "https://docs.injective.network"
+    }
+  },
+  {
+    "id": "nativecanto",
+    "name": "NativeCanto",
+    "displayName": "NativeCanto",
+    "coinId": 10007700,
+    "symbol": "CANTO",
+    "decimals": 18,
+    "blockchain": "Cosmos",
+    "chainId": "canto_7700-1",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "canto",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://mintscan.io/canto",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "7A7830270097AA9AC8B819EFBB8E0B56579F20ECB7615ECD37E19ABEEFB8DB83",
+      "sampleAccount": "canto17xpfvakm2amg962yls6f84z3kell8c5lz0zsl4"
+    },
+    "info": {
+      "url": "https://canto.io/",
+      "documentation": "https://docs.canto.io/"
+    }
+  },
+  {
+    "id": "zetachain",
+    "name": "NativeZetaChain",
+    "displayName": "NativeZetaChain",
+    "coinId": 10007000,
+    "symbol": "ZETA",
+    "decimals": 18,
+    "blockchain": "Cosmos",
+    "chainId": "zetachain_7000-1",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "zeta",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.zetachain.com",
+      "txPath": "/cosmos/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "2DBB071DDD47985F4470A21E5943CE95D371AE4BDE2267E201D3553FB2BDCFDE",
+      "sampleAccount": "zeta14py36sx57ud82t9yrks9z6hdsrpn5x6kmxs0ne"
+    },
+    "info": {
+      "url": "https://www.zetachain.com/",
+      "documentation": "https://www.zetachain.com/docs/"
+    }
+  },
+  {
+    "id": "zetaevm",
+    "name": "Zeta EVM",
+    "coinId": 20007000,
+    "symbol": "ZETA",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "7000",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.zetachain.com",
+      "txPath": "/evm/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x04cb1201857de29af97b755e51c888454fb96c1f3bb3c1329bb94d5353d5c19e",
+      "sampleAccount": "0x85539A58F9c88DdDccBaBBfc660968323Fd1e167"
+    },
+    "info": {
+      "url": "https://www.zetachain.com/",
+      "documentation": "https://www.zetachain.com/docs/"
+    }
+  },
+  {
+    "id": "ton",
+    "name": "TON",
+    "coinId": 607,
+    "symbol": "TON",
+    "decimals": 9,
+    "blockchain": "The Open Network",
+    "derivation": [
+      {
+        "path": "m/44'/607'/0'"
+      }
+    ],
+    "curve": "ed25519",
+    "publicKeyType": "ed25519",
+    "explorer": {
+      "url": "https://tonscan.org",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "fJXfn0EVhV09HFuEgUHu4Cchb24nUQtIMwSzmzk2tLs=",
+      "sampleAccount": "EQCD39VS5jcptHL8vMjEXrzGaRcCVYto7HUn4bpAOg8xqB2N"
+    },
+    "info": {
+      "url": "https://ton.org",
+      "source": "https://github.com/ton-blockchain",
+      "rpc": "https://toncenter.com/api/v2/jsonRPC",
+      "documentation": "https://ton.org/docs"
+    }
+  },
+  {
+    "id": "neon",
+    "name": "Neon",
+    "coinId": 245022934,
+    "symbol": "NEON",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "245022934",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://neonscan.org",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x77d86af2c6f02f14ef13ca52bf54864d92fcc4b32d8e884e225061c006738ed6",
+      "sampleAccount": "0xfa4a8650e7bebb918859c280a86f9661bed29877"
+    },
+    "info": {
+      "url": "https://neonevm.org",
+      "source": "https://github.com/neonevm/neon-evm",
+      "rpc": "https://neon-proxy-mainnet.solana.p2p.org/",
+      "documentation": "https://docs.neonfoundation.io/docs/quick_start"
+    }
+  },
+  {
+    "id": "internet_computer",
+    "name": "Internet Computer",
+    "coinId": 223,
+    "symbol": "ICP",
+    "decimals": 8,
+    "blockchain": "InternetComputer",
+    "derivation": [
+      {
+        "path": "m/44'/223'/1'/0/0",
+        "xpub": "xpub",
+        "xpriv": "xpriv"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "explorer": {
+      "url": "https://dashboard.internetcomputer.org",
+      "txPath": "/transaction/",
+      "accountPath": "/account/",
+      "sampleTx": "9e32c54975adf84a1d98f19df41bbc34a752a899c32cc9c0000200b2c4308f85",
+      "sampleAccount": "529ea51c22e8d66e8302eabd9297b100fdb369109822248bb86939a671fbc55b"
+    },
+    "info": {
+      "url": "https://internetcomputer.org",
+      "source": "https://github.com/dfinity/ic",
+      "rpc": "",
+      "documentation": "https://internetcomputer.org/docs"
+    }
+  },
+  {
+    "id": "manta",
+    "name": "Manta Pacific",
+    "coinId": 169,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "169",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://pacific-explorer.manta.network",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x2bbd5d85b0ed05d1416e30ce1197a6f0c27d10ce02593a2719e2baf486d2e8c2",
+      "sampleAccount": "0xF122a1aC569a36a5Cf6d0F828A22254c8A9afF84"
+    },
+    "info": {
+      "url": "https://pacific.manta.network",
+      "source": "https://github.com/manta-network",
+      "rpc": "https://pacific-rpc.manta.network/http",
+      "documentation": "https://docs.manta.network/docs/Introduction"
+    }
+  },
+  {
+    "id": "metis",
+    "name": "Metis",
+    "coinId": 10001088,
+    "symbol": "METIS",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1088",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://andromeda-explorer.metis.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x422f2ebbede32d4434ad0cf0ae55d44a84e14d3d5725a760133255b42676d8ce",
+      "sampleAccount": "0xBe9E8Ec25866B21bA34e97b9393BCabBcB4A5C86"
+    },
+    "info": {
+      "url": "https://www.metis.io/",
+      "source": "https://github.com/MetisProtocol/mvm",
+      "rpc": "https://andromeda.metis.io/?owner=1088",
+      "documentation": "https://docs.metis.io/"
+    }
+  },
+  {
+    "id": "aurora",
+    "name": "Aurora",
+    "coinId": 1323161554,
+    "symbol": "ETH",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1313161554",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://aurorascan.dev",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x99deebdb70f8027037abb3d3d0f3c7523daee857d85e9056d2671593ff2f2f28",
+      "sampleAccount": "0x8707cdE20dd43E3dB1F74c28fcd509ef38B0bA51"
+    },
+    "info": {
+      "url": "https://aurora.dev/",
+      "source": "https://github.com/aurora-is-near/aurora-engine",
+      "rpc": "https://mainnet.aurora.dev/",
+      "documentation": "https://doc.aurora.dev/"
+    }
+  },
+  {
+    "id": "evmos",
+    "name": "Evmos",
+    "coinId": 10009001,
+    "symbol": "EVMOS",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "9001",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://evm.evmos.org",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x24af42cf4977a96d62e3a82c3cd9b519c3e7c53dd83398b88f0cb435d867b422",
+      "sampleAccount": "0x30627903124Aa1e71384bc52e1cb96E4AB3252b6"
+    },
+    "info": {
+      "url": "https://evmos.org/",
+      "source": "https://github.com/tharsis/evmos",
+      "rpc": "https://eth.bd.evmos.org:8545",
+      "documentation": "https://docs.evmos.org/"
+    }
+  },
+  {
+    "id": "nativeevmos",
+    "name": "NativeEvmos",
+    "displayName": "Native Evmos",
+    "coinId": 20009001,
+    "symbol": "EVMOS",
+    "decimals": 18,
+    "blockchain": "NativeEvmos",
+    "chainId": "evmos_9001-2",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "evmos",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://mintscan.io/evmos",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "A16C211C83AD1E684DE46F694FAAC17D8465C864BD7385A81EC062CDE0638811",
+      "sampleAccount": "evmos17xpfvakm2amg962yls6f84z3kell8c5ljcjw34"
+    },
+    "info": {
+      "url": "https://evmos.org/",
+      "client": "https://github.com/tharsis/evmos",
+      "clientPublic": "https://rest.bd.evmos.org:1317",
+      "clientDocs": ""
+    }
+  },
+  {
+    "id": "moonriver",
+    "name": "Moonriver",
+    "coinId": 10001285,
+    "symbol": "MOVR",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1285",
+    "explorer": {
+      "url": "https://moonriver.moonscan.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x2e2daa3943ba65d9bbb910a4f6765aa6a466a0ef8935090547ca9d30e201e032",
+      "sampleAccount": "0x899831D937937d011305E73EE782cce0455DF15a"
+    },
+    "info": {
+      "url": "https://moonbeam.network/networks/moonriver",
+      "rpc": "https://moonriver.public.blastapi.io"
+    }
+  },
+  {
+    "id": "moonbeam",
+    "name": "Moonbeam",
+    "coinId": 10001284,
+    "symbol": "GLMR",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "1284",
+    "explorer": {
+      "url": "https://moonscan.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0xb22a146c933e6e51affbfa5f712a266b5f5e92ae453cd2f252bcc3c36ff035a6",
+      "sampleAccount": "0x201bb4f276C765dF7225e5A4153E17edD23a67eC"
+    },
+    "info": {
+      "url": "https://moonbeam.network",
+      "rpc": "https://rpc.api.moonbeam.network",
+      "documentation": "https://docs.moonbeam.network"
+    }
+  },
+  {
+    "id": "klaytn",
+    "name": "Klaytn",
+    "coinId": 10008217,
+    "symbol": "KLAY",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "8217",
+    "explorer": {
+      "url": "https://scope.klaytn.com",
+      "txPath": "/tx/",
+      "accountPath": "/account/",
+      "sampleTx": "0x93ea92687845fe7bb6cacd69c76a16a2a3c2bbb85a8a93ff0e032d0098d583d7",
+      "sampleAccount": "0x2ad9656bf5b82caf10847b431012e28e301e83ba"
+    },
+    "info": {
+      "url": "https://klaytn.foundation",
+      "rpc": "https://public-node-api.klaytnapi.com/v1/cypress",
+      "documentation": "https://docs.klaytn.foundation"
+    }
+  },
+  {
+    "id": "meter",
+    "name": "Meter",
+    "coinId": 18000,
+    "chainId": "82",
+    "symbol": "MTR",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "explorer": {
+      "url": "https://scan.meter.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x8ea268d5dbb40217c763b800a75fc063cf28b56f40f2bc69dc043f5c4bbdc144",
+      "sampleAccount": "0xe5a273954d24eddf9ae9ea4cef2347d584cfa3dd"
+    },
+    "info": {
+      "url": "https://meter.io/",
+      "source": "https://github.com/meterio/meter-pov",
+      "rpc": "https://rpc.meter.io",
+      "documentation": "https://docs.meter.io/"
+    }
+  },
+  {
+    "id": "okc",
+    "name": "OKX Chain",
+    "coinId": 996,
+    "chainId": "66",
+    "symbol": "OKT",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://www.oklink.com/oktc",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x46C3A947E8248570FBD28E4FE456CC8F80DFD90716533878FB67857B95FA3D37",
+      "sampleAccount": "0x074faafd0b20fad2efa115b8ed7e75993e580b85"
+    },
+    "info": {
+      "url": "https://www.okx.com/okc",
+      "source": "https://github.com/okex/exchain",
+      "rpc": "https://exchainrpc.okex.org",
+      "documentation": "https://okc-docs.readthedocs.io/en/latest"
+    }
+  },
+  {
+    "id": "cfxevm",
+    "name": "Conflux eSpace",
+    "coinId": 1030,
+    "chainId": "1030",
+    "symbol": "CFX",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://evm.confluxscan.net",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x920efefb3213b2d6a3b84149cb50b61a813d085443a20e1b0eab74120e41ff72",
+      "sampleAccount": "0x337a087daef75c72871de592fbbba570829a936a"
+    },
+    "info": {
+      "url": "https://confluxnetwork.org",
+      "source": "https://github.com/conflux-chain",
+      "rpc": "https://evm.confluxrpc.com",
+      "documentation": "https://doc.confluxnetwork.org/docs/espace"
+    }
+  },
+  {
+    "id": "greenfield",
+    "name": "Greenfield",
+    "displayName": "BNB Greenfield",
+    "coinId": 5600,
+    "symbol": "BNB",
+    "decimals": 18,
+    "chainId": "1017",
+    "blockchain": "Greenfield",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://greenfieldscan.com",
+      "txPath": "/tx/",
+      "accountPath": "/account/",
+      "sampleTx": "0x150eac42070957115fd538b1f348fadd78d710fb641c248120efcf35d1e7e4f3",
+      "sampleAccount": "0xcf0f6b88ed72653b00fdebbffc90b98072cb3285"
+    },
+    "info": {
+      "url": "https://greenfield.bnbchain.org",
+      "source": "https://github.com/bnb-chain/greenfield",
+      "rpc": "https://gnfd-testnet-fullnode-tendermint-us.bnbchain.org",
+      "documentation": "https://docs.bnbchain.org/greenfield-docs"
+    }
+  },
+  {
+    "id": "opbnb",
+    "name": "OpBNB",
+    "coinId": 204,
+    "chainId": "204",
+    "symbol": "BNB",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://opbnbscan.com",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x788ea8fb4a82dae957f1d3b18af3cd0bbde55a276e66bd17af8c869f24c03a0f",
+      "sampleAccount": "0x4eaf936c172b5e5511959167e8ab4f7031113ca3"
+    },
+    "info": {
+      "url": "https://opbnb.bnbchain.org/en",
+      "source": "https://github.com/bnb-chain/opbnb",
+      "rpc": "https://opbnb-mainnet-rpc.bnbchain.org",
+      "documentation": "https://docs.bnbchain.org/opbnb-docs"
+    }
+  },
+  {
+    "id": "stratis",
+    "name": "Stratis",
+    "coinId": 105105,
+    "symbol": "STRAX",
+    "decimals": 8,
+    "blockchain": "Bitcoin",
+    "derivation": [
+      {
+        "path": "m/44'/105105'/0'/0/0",
+        "xpub": "xpub",
+        "xprv": "xprv"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "strax",
+    "p2pkhPrefix": 75,
+    "p2shPrefix": 140,
+    "publicKeyHasher": "sha256ripemd",
+    "base58Hasher": "sha256d",
+    "explorer": {
+      "url": "https://explorer.rutanio.com/strax/explorer",
+      "txPath": "/transaction/",
+      "accountPath": "/address/",
+      "sampleTx": "3923df87e83859dec8b87a414cbb1529113788c512a4d0c283e1394c274f0bfb",
+      "sampleAccount": "XWqnSWzQA5kDAS727UTYtXkdcbKc8mEvyN"
+    },
+    "info": {
+      "url": "https://www.stratisplatform.com/",
+      "source": "https://github.com/stratisproject",
+      "rpc": "",
+      "documentation": "https://academy.stratisplatform.com/index.html"
+    }
+  },
+  {
+    "id": "Nebl",
+    "name": "Nebl",
+    "coinId": 146,
+    "symbol": "NEBL",
+    "decimals": 8,
+    "blockchain": "Verge",
+    "derivation": [
+      {
+        "path": "m/44'/146'/0'/0/0",
+        "xpub": "xpub",
+        "xprv": "xprv"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "p2pkhPrefix": 53,
+    "p2shPrefix": 112,
+    "publicKeyHasher": "sha256ripemd",
+    "base58Hasher": "sha256d",
+    "explorer": {
+      "url": "https://explorer.nebl.io",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "1e56c745ab87d702c98eddc6bc2475b2eb292ed4af92d170b2362c8a089272a4",
+      "sampleAccount": "NboLGGKWtK5eXzaah5GVpXju9jCcoMi4cc"
+    },
+    "info": {
+      "url": "https://nebl.io",
+      "source": "https://github.com/NeblioTeam",
+      "rpc": "",
+      "documentation": "https://github.com/NeblioTeam"
+    }
+  },
+  {
+    "id": "hedera",
+    "name": "Hedera",
+    "coinId": 3030,
+    "symbol": "HBAR",
+    "decimals": 8,
+    "blockchain": "Hedera",
+    "derivation": [
+      {
+        "path": "m/44'/3030'/0'/0'/0"
+      }
+    ],
+    "curve": "ed25519",
+    "publicKeyType": "ed25519",
+    "explorer": {
+      "url": "https://hashscan.io/mainnet",
+      "txPath": "/transaction/",
+      "accountPath": "/account/",
+      "sampleTx": "0.0.19790-1666769504-858851231",
+      "sampleAccount": "0.0.19790"
+    },
+    "info": {
+      "url": "https://hedera.com/",
+      "source": "https://github.com/hashgraph",
+      "documentation": "https://docs.hedera.com"
+    }
+  },
+  {
+    "id": "agoric",
+    "name": "Agoric",
+    "coinId": 564,
+    "symbol": "BLD",
+    "decimals": 6,
+    "blockchain": "Cosmos",
+    "derivation": [
+      {
+        "path": "m/44'/564'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "agoric",
+    "chainId": "agoric-3",
+    "addressHasher": "sha256ripemd",
+    "explorer": {
+      "url": "https://atomscan.com/agoric",
+      "txPath": "/transactions/",
+      "accountPath": "/accounts/",
+      "sampleTx": "576224B1A0F3D56BA23C5350C2A0E3CEA86F40005B828793E5ACBC2F4813152E",
+      "sampleAccount": "agoric1cqvwa8jr6pmt45jndanc8lqmdsxjkhw0yertc0"
+    },
+    "info": {
+      "url": "https://agoric.com",
+      "source": "https://github.com/Agoric/agoric-sdk",
+      "rpc": "https://agoric-rpc.polkachu.com",
+      "documentation": "https://docs.agoric.com"
+    }
+  },
+  {
+    "id": "dydx",
+    "name": "Dydx",
+    "displayName": "dYdX",
+    "coinId": 22000118,
+    "symbol": "DYDX",
+    "decimals": 18,
+    "blockchain": "Cosmos",
+    "derivation": [
+      {
+        "path": "m/44'/118'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1",
+    "hrp": "dydx",
+    "chainId": "dydx-mainnet-1",
+    "addressHasher": "sha256ripemd",
+    "explorer": {
+      "url": "https://www.mintscan.io/dydx",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "F236222E4F7C92FA84711FD6451ED22DD56CBDFA319BFDAFB99A21E4E9B9EC2F",
+      "sampleAccount": "dydx1adl7usw7z2dnysyn7wvrghu0u0q6gr7jqs4gtt"
+    },
+    "info": {
+      "url": "https://dydx.exchange",
+      "source": "https://github.com/dydxprotocol",
+      "rpc": "https://dydx-dao-api.polkachu.com",
+      "documentation": "https://docs.dydx.exchange"
+    }
+  },
+  {
+    "id": "nativeinjective",
+    "name": "NativeInjective",
+    "displayName": "Native Injective",
+    "coinId": 10000060,
+    "symbol": "INJ",
+    "decimals": 18,
+    "blockchain": "NativeInjective",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "inj",
+    "addressHasher": "keccak256",
+    "chainId": "injective-1",
+    "explorer": {
+      "url": "https://www.mintscan.io/injective",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "C5F6A4FF9DF1AE9FF543D2CEBD8E3E9B04290B2445F9D91D7707EDBF4B7EE16B",
+      "sampleAccount": "inj1xmpkmxr4as00em23tc2zgmuyy2gr4h3wgcl6vd"
+    },
+    "info": {
+      "url": "https://injective.com",
+      "documentation": "https://docs.injective.network"
+    }
+  },
+  {
+    "id": "nativecanto",
+    "name": "NativeCanto",
+    "displayName": "NativeCanto",
+    "coinId": 10007700,
+    "symbol": "CANTO",
+    "decimals": 18,
+    "blockchain": "Cosmos",
+    "chainId": "canto_7700-1",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "canto",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://mintscan.io/canto",
+      "txPath": "/txs/",
+      "accountPath": "/account/",
+      "sampleTx": "7A7830270097AA9AC8B819EFBB8E0B56579F20ECB7615ECD37E19ABEEFB8DB83",
+      "sampleAccount": "canto17xpfvakm2amg962yls6f84z3kell8c5lz0zsl4"
+    },
+    "info": {
+      "url": "https://canto.io/",
+      "documentation": "https://docs.canto.io/"
+    }
+  },
+  {
+    "id": "zetachain",
+    "name": "NativeZetaChain",
+    "displayName": "NativeZetaChain",
+    "coinId": 10007000,
+    "symbol": "ZETA",
+    "decimals": 18,
+    "blockchain": "Cosmos",
+    "chainId": "zetachain_7000-1",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "hrp": "zeta",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.zetachain.com",
+      "txPath": "/cosmos/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "2DBB071DDD47985F4470A21E5943CE95D371AE4BDE2267E201D3553FB2BDCFDE",
+      "sampleAccount": "zeta14py36sx57ud82t9yrks9z6hdsrpn5x6kmxs0ne"
+    },
+    "info": {
+      "url": "https://www.zetachain.com/",
+      "documentation": "https://www.zetachain.com/docs/"
+    }
+  },
+  {
+    "id": "zetaevm",
+    "name": "Zeta EVM",
+    "coinId": 20007000,
+    "symbol": "ZETA",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "7000",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://explorer.zetachain.com",
+      "txPath": "/evm/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x04cb1201857de29af97b755e51c888454fb96c1f3bb3c1329bb94d5353d5c19e",
+      "sampleAccount": "0x85539A58F9c88DdDccBaBBfc660968323Fd1e167"
+    },
+    "info": {
+      "url": "https://www.zetachain.com/",
+      "documentation": "https://www.zetachain.com/docs/"
+    }
+  },
+  {
+    "id": "ton",
+    "name": "TON",
+    "coinId": 607,
+    "symbol": "TON",
+    "decimals": 9,
+    "blockchain": "The Open Network",
+    "derivation": [
+      {
+        "path": "m/44'/607'/0'"
+      }
+    ],
+    "curve": "ed25519",
+    "publicKeyType": "ed25519",
+    "explorer": {
+      "url": "https://tonscan.org",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "fJXfn0EVhV09HFuEgUHu4Cchb24nUQtIMwSzmzk2tLs=",
+      "sampleAccount": "EQCD39VS5jcptHL8vMjEXrzGaRcCVYto7HUn4bpAOg8xqB2N"
+    },
+    "info": {
+      "url": "https://ton.org",
+      "source": "https://github.com/ton-blockchain",
+      "rpc": "https://toncenter.com/api/v2/jsonRPC",
+      "documentation": "https://ton.org/docs"
+    }
+  },
+  {
+    "id": "neon",
+    "name": "Neon",
+    "coinId": 245022934,
+    "symbol": "NEON",
+    "decimals": 18,
+    "blockchain": "Ethereum",
+    "derivation": [
+      {
+        "path": "m/44'/60'/0'/0/0"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "chainId": "245022934",
+    "addressHasher": "keccak256",
+    "explorer": {
+      "url": "https://neonscan.org",
+      "txPath": "/tx/",
+      "accountPath": "/address/",
+      "sampleTx": "0x77d86af2c6f02f14ef13ca52bf54864d92fcc4b32d8e884e225061c006738ed6",
+      "sampleAccount": "0xfa4a8650e7bebb918859c280a86f9661bed29877"
+    },
+    "info": {
+      "url": "https://neonevm.org",
+      "source": "https://github.com/neonevm/neon-evm",
+      "rpc": "https://neon-proxy-mainnet.solana.p2p.org/",
+      "documentation": "https://docs.neonfoundation.io/docs/quick_start"
+    }
+  },
+  {
+    "id": "internet_computer",
+    "name": "Internet Computer",
+    "coinId": 223,
+    "symbol": "ICP",
+    "decimals": 8,
+    "blockchain": "InternetComputer",
+    "derivation": [
+      {
+        "path": "m/44'/223'/1'/0/0",
+        "xpub": "xpub",
+        "xpriv": "xpriv"
+      }
+    ],
+    "curve": "secp256k1",
+    "publicKeyType": "secp256k1Extended",
+    "explorer": {
+      "url": "https://dashboard.internetcomputer.org",
+      "txPath": "/transaction/",
+      "accountPath": "/account/",
+      "sampleTx": "9e32c54975adf84a1d98f19df41bbc34a752a899c32cc9c0000200b2c4308f85",
+      "sampleAccount": "529ea51c22e8d66e8302eabd9297b100fdb369109822248bb86939a671fbc55b"
+    },
+    "info": {
+      "url": "https://internetcomputer.org",
+      "source": "https://github.com/dfinity/ic",
+      "rpc": "",
+      "documentation": "https://internetcomputer.org/docs"
+    }
   }
 ]
