@@ -121,16 +121,13 @@ jobs:
       - name: Download previous artifact
         id: download_prev_artifact
         uses: dawidd6/action-download-artifact@v3
+        if_no_artifact_found: warn
         with:
           commit: ${{github.event.pull_request.head.sha}}
           path: prev
 
-      - name: Compare sizes
-        run: |
-          prev_size=$(du -k registry.json | cut -f1)
-          new_size=$(du -k prev/registry.json | cut -f1)
-
       - name: Find Comment
+        if: steps.download_prev_artifact.outputs.found_artifact == 'true'
         uses: peter-evans/find-comment@v1
         id: binary_size_comment
         with:
@@ -139,6 +136,7 @@ jobs:
           body-includes: Binary size comparison
 
       - name: Create or Update Comment
+        if: steps.download_prev_artifact.outputs.found_artifact == 'true'
         uses: peter-evans/create-or-update-comment@v1
         with:
           comment-id: ${{ steps.find_comment.outputs.comment-id }}
