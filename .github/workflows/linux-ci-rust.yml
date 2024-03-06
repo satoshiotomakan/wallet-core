@@ -121,10 +121,10 @@ jobs:
       - name: Download previous artifact
         id: download_prev_artifact
         uses: dawidd6/action-download-artifact@v3
-        if_no_artifact_found: warn
         with:
           commit: ${{github.event.pull_request.head.sha}}
           path: prev
+          if_no_artifact_found: warn
 
       - name: Find Comment
         if: steps.download_prev_artifact.outputs.found_artifact == 'true'
