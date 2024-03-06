@@ -156,10 +156,9 @@ jobs:
         if: steps.download_prev_report.outputs.found_artifact == 'true'
         id: craft_body
         run: |
-          before_report=./previous/release-report.json
-          after_report=./release-report.json
-          markdown_diff=$(./tools/release-size compare $before_report $after_report)
-          echo "markdown_body=$markdown_diff" >> $GITHUB_OUTPUT
+          echo "## Binary size comparison" > report-diff.md
+          echo "" >> report-diff.md
+          ./tools/release-size compare previous/release-report.json release-report.json >> report-diff.md
 
       - name: Create or Update Comment
         uses: edumserrano/find-create-or-update-comment@v2
@@ -169,7 +168,4 @@ jobs:
           body-includes: "Binary size comparison"
           comment-author: 'github-actions[bot]'
           edit-mode: replace
-          body: |
-            ## Binary size comparison
-
-            ${{ steps.craft_body.outputs.markdown_body }}
+          body-path: 'report-diff.md'
