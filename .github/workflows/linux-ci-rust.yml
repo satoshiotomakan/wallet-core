@@ -107,7 +107,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions-rs/toolchain@v1
-        toolchain: stable
+        with:
+          toolchain: stable
       - name: Build binaries
         run: |
           cargo build --target aarch64-apple-ios --release
@@ -127,7 +128,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions-rs/toolchain@v1
-        toolchain: stable
+        with:
+          toolchain: stable
       - name: Build binaries
         run: |
           cargo build --target aarch64-apple-ios --release
