@@ -122,7 +122,7 @@ jobs:
         id: download_prev_artifact
         uses: dawidd6/action-download-artifact@v3
         with:
-          commit: ${{github.event.pull_request.head.sha}}
+          commit: ${{github.event.pull_request.base.sha}}
           path: prev
           if_no_artifact_found: warn
 
