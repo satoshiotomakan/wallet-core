@@ -139,7 +139,8 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           # Please note `previous/release-report.json` may not exist if the previous report was not found.
-          ./tools/release-size compare previous/release-report.json release-report.json > report-diff.md
+          ./tools/release-size compare previous/release-report.json release-report.json |
+            > report-diff.md
 
       - name: Create or Update Comment
         uses: edumserrano/find-create-or-update-comment@v2
