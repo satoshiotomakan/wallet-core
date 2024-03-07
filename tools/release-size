@@ -13,6 +13,14 @@ RUST_TARGETS = [
 LIB_NAME = "libwallet_core_rs.a"
 
 
+def display_size(size_kb: int) -> str:
+    if size_kb >= 10000:
+        size_mb = float(size_kb) / 1024
+        return f'{size_mb:+.2f} MB'
+    else:
+        return f'{size_kb} KB'
+
+
 def measure_rust(_args):
     result = {}
 
