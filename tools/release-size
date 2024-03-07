@@ -37,7 +37,7 @@ def measure_rust(_args):
 def compare_sizes(args):
     def display_target(target: str, before_kb: int, current_kb: int):
         diff_kb = current_kb - before_kb
-        print(f'**{target}**')
+        print(f'➡️ **{target}**')
         print("```diff")
         if before_kb == current_kb:
             print(f'  Size {display_size(before_kb)}')
