@@ -13,6 +13,14 @@ RUST_TARGETS = [
 LIB_NAME = "libwallet_core_rs.a"
 
 
+def display_size(size_kb: int) -> str:
+    if size_kb >= 10000:
+        size_mb = float(size_kb) / 1024
+        return f'{size_mb:+.2f} MB'
+    else:
+        return f'{size_kb} KB'
+
+
 def measure_rust(_args):
     result = {}
 
@@ -20,26 +28,35 @@ def measure_rust(_args):
         # TODO 'rust-test' to 'rust'
         path = f'rust-test/target/{target}/release/{LIB_NAME}'
         file_stats = os.stat(path)
-        file_size_mb = file_stats.st_size / 1024 / 1024
-        result[target] = round(file_size_mb, 2)
+        file_size_kb = file_stats.st_size / 1024
+        result[target] = int(file_size_kb)
 
     print(json.dumps(result))
 
 
 def compare_sizes(args):
-    print('```diff')
+    def display_target(target: str, before_kb: int, current_kb: int):
+        diff_kb = current_kb - before_kb
+        print(f'➡️ **{target}**')
+        print("```diff")
+        if before_kb == current_kb:
+            print(f'  Size {display_size(before_kb)}')
+        else:
+            print(f'- Size {display_size(before_kb)}')
+            print(f'+ Size {display_size(current_kb)} \t {display_size(diff_kb)}')
+        print("```")
 
-    before_json = json.load(open(args.before, 'r'))
-    after_json = json.load(open(args.after, 'r'))
-    for target, after_value in after_json.items():
-        before_value = before_json[target]
-        diff = after_value - before_value
+    current_json = json.load(open(args.current, 'r'))
+    before_json = {}
+    if os.path.isfile(args.before):
+        before_json = json.load(open(args.before, 'r'))
 
-        print(f'**{target}**')
-        print(f'- Size {before_value}')
-        print(f'+ Size {after_value} \t {diff:+.2f}')
+    print("## Binary size comparison")
+    print()
+    for target, current_kb in current_json.items():
+        before_kb = before_json.get(target, 0)
+        display_target(target, before_kb, current_kb)
         print()
-    print("```")
 
 
 if __name__ == '__main__':
@@ -50,9 +67,9 @@ if __name__ == '__main__':
     measure_parser.set_defaults(func=measure_rust)
 
     compare_parser = subparsers.add_parser('compare',
-                                           help="Compares binary sizes. Takes 'before' and 'after' file names")
+                                           help="Compares binary sizes. Takes 'before' and 'current' file names")
     compare_parser.add_argument('before')
-    compare_parser.add_argument('after')
+    compare_parser.add_argument('current')
     compare_parser.set_defaults(func=compare_sizes)
 
     args = parser.parse_args()
