@@ -38,11 +38,13 @@ def compare_sizes(args):
     def display_target(target: str, before_kb: int, current_kb: int):
         diff_kb = current_kb - before_kb
         print(f'**{target}**')
+        print("```diff")
         if before_kb == current_kb:
             print(f'  Size {display_size(before_kb)}')
         else:
             print(f'- Size {display_size(before_kb)}')
             print(f'+ Size {display_size(current_kb)} \t {display_size(diff_kb)}')
+        print("```")
 
     current_json = json.load(open(args.current, 'r'))
     before_json = {}
@@ -51,12 +53,10 @@ def compare_sizes(args):
 
     print("## Binary size comparison")
     print()
-    print("```diff")
     for target, current_kb in current_json.items():
         before_kb = before_json.get(target, 0)
         display_target(target, before_kb, current_kb)
         print()
-    print("```")
 
 
 if __name__ == '__main__':
