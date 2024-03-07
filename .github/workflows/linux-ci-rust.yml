@@ -97,9 +97,8 @@ jobs:
       - name: Run tests in WASM
         run: tools/rust-test wasm
 
-  upload-binary-sizes:
+  check-binary-sizes:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
     steps:
       - uses: actions/checkout@v3
       - uses: actions-rs/toolchain@v1
@@ -109,60 +108,41 @@ jobs:
       - name: Install toolchain
         run: |
           rustup target add armv7-linux-androideabi
+
       - name: Build binaries
         run: |
           cargo build --target armv7-linux-androideabi --release
         working-directory: rust-test
+
       - name: Generate release report
         run: |
           ./tools/release-size measure-rust > release-report.json
+
       - name: Upload release report
         uses: actions/upload-artifact@v2
         with:
-          name: release_report
+          name: release_report_1
           path: release-report.json
 
-  check-binary-sizes:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-      # TODO remove this step
-      - name: Install toolchain
-        run: |
-          rustup target add armv7-linux-androideabi
-      - name: Build binaries
-        run: |
-          cargo build --target armv7-linux-androideabi --release
-        working-directory: rust-test
-      - name: Generate release report
-        run: |
-          ./tools/release-size measure-rust > release-report.json
-
+      # Download previous release report, compare the release binary sizes and post/update a comment in the Pull Request.
       - name: Download previous release report
-        id: download_prev_report
+        if: github.event_name == 'pull_request'
         uses: dawidd6/action-download-artifact@v3
         with:
           commit: ${{github.event.pull_request.base.sha}}
           path: previous
           if_no_artifact_found: warn
           # Same artifact name as at the "Upload release report" step.
-          name: release_report
+          name: release_report_1
 
       - name: Craft Comment Body
-        if: steps.download_prev_report.outputs.found_artifact == 'true'
-        id: craft_body
+        if: github.event_name == 'pull_request'
         run: |
-          echo "## Binary size comparison" > report-diff.md
-          echo "" >> report-diff.md
-          ./tools/release-size compare previous/release-report.json release-report.json >> report-diff.md
+          # Please note `previous/release-report.json` may not exist if the previous report was not found.
+          ./tools/release-size compare previous/release-report.json release-report.json > report-diff.md
 
       - name: Create or Update Comment
         uses: edumserrano/find-create-or-update-comment@v2
-        if: steps.download_prev_report.outputs.found_artifact == 'true'
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body-includes: "Binary size comparison"
